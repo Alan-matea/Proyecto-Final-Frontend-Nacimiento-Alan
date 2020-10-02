@@ -26,8 +26,8 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(name, Apellido, Edad, Mail) {
-  return { name, Apellido, Edad, Mail };
+function createData(name, Artista, Album, Duración) {
+  return { name, Artista, Album, Duración };
 }
 
 const rows = [
@@ -53,9 +53,9 @@ export default function CustomizedTables() {
         <TableHead>
           <TableRow>
             <StyledTableCell>Nombre</StyledTableCell>
-            <StyledTableCell align="right">Apellido</StyledTableCell>
-            <StyledTableCell align="right">Edad&nbsp;</StyledTableCell>
-            <StyledTableCell align="right">Mail&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Artista</StyledTableCell>
+            <StyledTableCell align="right">Album&nbsp;</StyledTableCell>
+            <StyledTableCell align="right">Duración&nbsp;</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -64,9 +64,9 @@ export default function CustomizedTables() {
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.Apellido}</StyledTableCell>
-              <StyledTableCell align="right">{row.Edad}</StyledTableCell>
-              <StyledTableCell align="right">{row.Mail}</StyledTableCell>
+              <StyledTableCell align="right">{row.Artista}</StyledTableCell>
+              <StyledTableCell align="right">{row.Album}</StyledTableCell>
+              <StyledTableCell align="right">{row.Duración}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
