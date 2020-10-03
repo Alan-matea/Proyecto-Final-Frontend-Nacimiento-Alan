@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AACA,KACE,iBACF,CAEA,QACE,eACF,CAEA,MACE,WACF","file":"main.59f1562f.chunk.css","sourcesContent":["\r\n.App {\r\n  text-align: center;\r\n}\r\n\r\n.Button {\r\n  margin-top: 30px;\r\n}\r\n\r\n.User {\r\n  margin: 12px;\r\n}"]}

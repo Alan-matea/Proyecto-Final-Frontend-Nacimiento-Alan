@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/css/main.59f1562f.chunk.css",
+    "main.js": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/js/main.6e681949.chunk.js",
+    "main.js.map": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/js/main.6e681949.chunk.js.map",
+    "runtime-main.js": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/js/runtime-main.78df02e4.js",
+    "runtime-main.js.map": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/js/runtime-main.78df02e4.js.map",
+    "static/js/2.d6ab66fb.chunk.js": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/js/2.d6ab66fb.chunk.js",
+    "static/js/2.d6ab66fb.chunk.js.map": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/js/2.d6ab66fb.chunk.js.map",
+    "index.html": "/Proyecto-Final-Frontend-Nacimiento-Alan/index.html",
+    "precache-manifest.5593f2045d6cabc903d2f2d6e20718c7.js": "/Proyecto-Final-Frontend-Nacimiento-Alan/precache-manifest.5593f2045d6cabc903d2f2d6e20718c7.js",
+    "service-worker.js": "/Proyecto-Final-Frontend-Nacimiento-Alan/service-worker.js",
+    "static/css/main.59f1562f.chunk.css.map": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/css/main.59f1562f.chunk.css.map",
+    "static/js/2.d6ab66fb.chunk.js.LICENSE.txt": "/Proyecto-Final-Frontend-Nacimiento-Alan/static/js/2.d6ab66fb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.78df02e4.js",
+    "static/js/2.d6ab66fb.chunk.js",
+    "static/css/main.59f1562f.chunk.css",
+    "static/js/main.6e681949.chunk.js"
+  ]
+}
