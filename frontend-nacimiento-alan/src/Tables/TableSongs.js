@@ -1,5 +1,6 @@
 import React from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography"; 
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -7,6 +8,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import { Box } from "@material-ui/core";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -44,33 +46,38 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CustomizedTables() {
+export default function TableSongs({songs}) {
   const classes = useStyles();
 
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <StyledTableCell>Nombre</StyledTableCell>
-            <StyledTableCell align="right">Artista</StyledTableCell>
-            <StyledTableCell align="right">Album&nbsp;</StyledTableCell>
-            <StyledTableCell align="right">Duración&nbsp;</StyledTableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.name}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.Artista}</StyledTableCell>
-              <StyledTableCell align="right">{row.Album}</StyledTableCell>
-              <StyledTableCell align="right">{row.Duración}</StyledTableCell>
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <Box>
+      <Typography>
+        Lista de Canciones
+      </Typography>
+      <TableContainer component={Paper}>
+        <Table className={classes.table} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Nombre</StyledTableCell>
+              <StyledTableCell align="right">Artista</StyledTableCell>
+              <StyledTableCell align="right">Album</StyledTableCell>
+              <StyledTableCell align="right">Duración</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {songs.map((song) => (
+              <StyledTableRow key={song._id}>
+                <StyledTableCell component="th" scope="row">
+                  {song.name}
+                </StyledTableCell>
+                <StyledTableCell align="right">{song.artist}</StyledTableCell>
+                <StyledTableCell align="right">{song.album}</StyledTableCell>
+                <StyledTableCell align="right">{song.duration}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Box>
   );
 }
