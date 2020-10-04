@@ -55,7 +55,7 @@ export default function TableUser({ users, onClick }) {
   return (
     <Box>
       <Box m="15px">
-        <Typography variant="h4">Lista de Usuarios</Typography>
+        <Typography variant="h4" color="primary">Lista de Usuarios</Typography>
       </Box>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
@@ -80,8 +80,8 @@ export default function TableUser({ users, onClick }) {
                 <StyledTableCell align="right">{user.age}</StyledTableCell>
                 <StyledTableCell align="right">{user.mail}</StyledTableCell>
                 <StyledTableCell align="right">
-                  <Button onClick={(e) => onClick(e, user.likedSongs)}>
-                    Add
+                  <Button variant="contained" color="secondary" onClick={(e) => onClick(e, user.likedSongs)}>
+                    Ver
                   </Button>
                 </StyledTableCell>
               </StyledTableRow>

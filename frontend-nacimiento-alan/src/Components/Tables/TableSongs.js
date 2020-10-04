@@ -54,7 +54,9 @@ export default function TableSongs({ songs }) {
   return (
     <Box>
       <Box m="15px">
-        <Typography variant="h4">Lista de Canciones</Typography>
+        <Typography variant="h4" color="primary">
+          Lista de Canciones
+        </Typography>
       </Box>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
