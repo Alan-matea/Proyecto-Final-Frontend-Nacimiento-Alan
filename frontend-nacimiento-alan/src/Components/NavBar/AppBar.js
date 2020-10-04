@@ -9,7 +9,7 @@ export default function DenseAppBar() {
   return (
     <div>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar variant="regular" className="Items-position">
           <img src={LogoMatea} alt="LogoMatea" className="LogoMatea" />
           <Typography variant="h5">Api-Mateify</Typography>
         </Toolbar>

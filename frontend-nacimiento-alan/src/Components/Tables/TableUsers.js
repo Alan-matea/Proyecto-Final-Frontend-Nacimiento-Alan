@@ -50,7 +50,9 @@ export default function TableUser({ users, onClick }) {
 
   return (
     <Box>
-      <Typography>Lista de Usuarios</Typography>
+      <Box m="15px">
+        <Typography variant="h4">Lista de Usuarios</Typography>
+      </Box>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
