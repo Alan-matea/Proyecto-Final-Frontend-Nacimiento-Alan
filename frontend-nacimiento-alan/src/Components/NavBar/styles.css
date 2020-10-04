@@ -1,0 +1,12 @@
+.LogoMatea {
+  width: 35px;
+  margin: 10px;
+}
+
+.Items-position {
+  justify-content: center;
+  align-items: center;
+}
+.Fuente {
+  font-family: "Righteous", cursive;
+}

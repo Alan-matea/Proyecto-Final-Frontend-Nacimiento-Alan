@@ -1,17 +1,18 @@
-import { Box } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
-import AppBar from "./NavBar/AppBar"
-import TableUsers from "./Tables/TableUsers";
-import TableSongs from "./Tables/TableSongs";
-import "./index.css";
+import { Box } from "@material-ui/core";
+import AppBar from "./Components/NavBar/AppBar";
+import TableUsers from "./Components/Tables/TableUsers";
+import TableSongs from "./Components/Tables/TableSongs";
 
 const App = () => {
   const [users, setUsers] = useState([]);
   const [songs, setSongs] = useState([]);
-  
+
   const obtenerUsers = async () => {
     //Obtiene los usuarios desde el backend
-    const response = await fetch("https://api-mateify-alan-nacimiento.herokuapp.com/users");
+    const response = await fetch(
+      "https://api-mateify-alan-nacimiento.herokuapp.com/users"
+    );
     const data = await response.json();
     setUsers(data);
   };
@@ -30,7 +31,7 @@ const App = () => {
     <Box>
       <AppBar />
       <TableUsers users={users} onClick={handleClick} />
-      <TableSongs songs={songs}/>
+      <TableSongs songs={songs} />
     </Box>
   );
 };

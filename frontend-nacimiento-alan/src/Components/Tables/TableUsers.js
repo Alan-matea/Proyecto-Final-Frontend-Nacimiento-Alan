@@ -1,6 +1,5 @@
 import React from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography"; 
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -8,7 +7,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import { Box } from "@material-ui/core";
+import { Box, Button, Typography } from "@material-ui/core";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -28,8 +27,8 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(name, Artista, Album, Duración) {
-  return { name, Artista, Album, Duración };
+function createData(name, Apellido, Edad, Mail) {
+  return { name, Apellido, Edad, Mail };
 }
 
 const rows = [
@@ -46,33 +45,39 @@ const useStyles = makeStyles({
   },
 });
 
-export default function TableSongs({songs}) {
+export default function TableUser({ users, onClick }) {
   const classes = useStyles();
 
   return (
     <Box>
-      <Typography>
-        Lista de Canciones
-      </Typography>
+      <Typography>Lista de Usuarios</Typography>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
               <StyledTableCell>Nombre</StyledTableCell>
-              <StyledTableCell align="right">Artista</StyledTableCell>
-              <StyledTableCell align="right">Album</StyledTableCell>
-              <StyledTableCell align="right">Duración</StyledTableCell>
+              <StyledTableCell align="right">Apellido</StyledTableCell>
+              <StyledTableCell align="right">Edad</StyledTableCell>
+              <StyledTableCell align="right">Mail</StyledTableCell>
+              <StyledTableCell align="right">
+                Canciones Favoritas
+              </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {songs.map((song) => (
-              <StyledTableRow key={song._id}>
+            {users.map((user) => (
+              <StyledTableRow key={user._id}>
                 <StyledTableCell component="th" scope="row">
-                  {song.name}
+                  {user.name}
                 </StyledTableCell>
-                <StyledTableCell align="right">{song.artist}</StyledTableCell>
-                <StyledTableCell align="right">{song.album}</StyledTableCell>
-                <StyledTableCell align="right">{song.duration}</StyledTableCell>
+                <StyledTableCell align="right">{user.lastName}</StyledTableCell>
+                <StyledTableCell align="right">{user.age}</StyledTableCell>
+                <StyledTableCell align="right">{user.mail}</StyledTableCell>
+                <StyledTableCell align="right">
+                  <Button onClick={(e) => onClick(e, user.likedSongs)}>
+                    Add
+                  </Button>
+                </StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
