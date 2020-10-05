@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import AppBar from "./Components/NavBar/AppBar";
 import TableUsers from "./Components/Tables/TableUsers";
 import TableSongs from "./Components/Tables/TableSongs";
@@ -30,8 +30,14 @@ const App = () => {
   return (
     <Box>
       <AppBar />
-      <TableUsers users={users} onClick={handleClick} />
-      <TableSongs songs={songs} />
+      <Grid container spacing={3}>
+        <Grid item xs={6}>
+          <TableUsers users={users} onClick={handleClick} />
+        </Grid>
+        <Grid item xs={6}>
+          <TableSongs songs={songs} />
+        </Grid>
+      </Grid>
     </Box>
   );
 };
